@@ -3,10 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from "./components/Button";
+import { useTheme } from '@emotion/react'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const theme = useTheme()
   return (
     <>
       <div>
@@ -19,7 +20,6 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Button />
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -30,6 +30,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Button />
+      <button style={{ color: theme.colors.primary }}>Themed Button</button>
     </>
   )
 }
