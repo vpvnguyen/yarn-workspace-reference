@@ -27,6 +27,15 @@ yarn init
 cd packages/ui
 yarn init
 ```
+- Use dependencies from `packages/` in `apps/` (i.e.: `packages/ui` in `apps/vite`)
+- In `apps/vite/package.json`, declare dependency:
+```json
+{
+  "dependencies": {
+    "@yarn-workspace-reference/ui": "workspace:^"
+  }
+}
+```
 - Link workspaces together
 ```zsh
 yarn install
