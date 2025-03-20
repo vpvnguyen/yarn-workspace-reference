@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Button } from "@/components/Button";
+import { theme } from "@/theme";
 
 export default function Home() {
   return (
@@ -45,7 +46,11 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+        <div style={{ border: '1px solid', borderColor: theme.colors.primary, padding: '3rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+          <pre>@yarn-workspace-reference/ui</pre>
           <Button />
+          <button style={{ color: theme.colors.primary }}>Themed Button</button>
         </div>
       </main>
       <footer className={styles.footer}>
