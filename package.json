@@ -1,4 +1,21 @@
 {
+  "private": true,
   "name": "yarn-workspace-reference",
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.2.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "vite:": "yarn workspace @yarn-workspace-reference/vite",
+    "vite:add": "yarn vite: add",
+    "vite:dev": "yarn vite: run dev",
+    "vite:build": "yarn vite: run build",
+    "next:": "yarn workspace @yarn-workspace-reference/next",
+    "next:add": "yarn next: add",
+    "next:dev": "yarn next: run dev",
+    "next:build": "yarn next: run build",
+    "ui:": "yarn workspace @yarn-workspace-reference/ui",
+    "ui:add": "yarn ui: add"
+  }
 }
