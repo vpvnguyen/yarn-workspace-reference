@@ -18,7 +18,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
 
       - name: Install dependencies
-        run: yarn install
+        run: corepack enable && corepack use && yarn install
 
       - name: Build package
         run: yarn workspace @yarn-workspace-reference/ui run build
