@@ -11,3 +11,6 @@
 
 #!.yarn/cache
 .pnp.*
+.npmrc
+dist
+node_modules
