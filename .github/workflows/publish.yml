@@ -6,6 +6,9 @@ on:
     branches:
       - main
 
+env:
+  node-version: 22
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -14,13 +17,13 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: ${{ env.node-version }}
           registry-url: 'https://npm.pkg.github.com/'
 
       - name: Install dependencies
         run:   
-          corepack enable
-          corepack use
+          corepack enable yarn
+          corepack prepare
           yarn install
 
       - name: Build package
