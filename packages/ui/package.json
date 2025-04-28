@@ -1,8 +1,23 @@
 {
   "name": "@yarn-workspace-reference/ui",
+  "version": "1.0.0",
   "packageManager": "yarn@4.2.2",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.3"
   }
 }
