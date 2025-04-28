@@ -11,7 +11,7 @@
     "build": "vite build"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "@vpvnguyen/yarn-workspace-reference:registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
