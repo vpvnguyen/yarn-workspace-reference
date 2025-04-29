@@ -18,6 +18,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
       - run: corepack enable yarn
       - run: corepack prepare
+      - run: chmod +x ./generate-yarnrc.sh
       - run: ./generate-yarnrc.sh
       - run: echo "NODE_AUTH_TOKEN"
       - run: echo "$NODE_AUTH_TOKEN"
