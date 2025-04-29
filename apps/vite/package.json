@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
+    "@vpvnguyen/github-package-reference": "1.0.7",
     "@yarn-workspace-reference/ui": "workspace:^",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

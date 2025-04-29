@@ -18,7 +18,8 @@
     "next:build": "yarn next: run build",
     "ui:": "yarn workspace @yarn-workspace-reference/ui",
     "ui:add": "yarn ui: add",
-    "ui:build": "yarn ui: run build"
+    "ui:build": "yarn ui: run build",
+    "ui:publish": "yarn ui: run publish"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

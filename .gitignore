@@ -14,3 +14,4 @@
 # .npmrc
 dist
 node_modules
+.yarnrc.yml
