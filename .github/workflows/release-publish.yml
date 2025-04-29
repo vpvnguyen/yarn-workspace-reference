@@ -22,7 +22,7 @@ jobs:
       - run: echo "NODE_AUTH_TOKEN"
       - run: echo "$NODE_AUTH_TOKEN"
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~./.npmrc
-      - run: echo "    npmAuthToken: \"${{ secrets.GITHUB_TOKEN }}\"" >> ~/.yarnrc.yml
+      - run: cat ~/.npmrc
       - run: yarn install
       - run: yarn ui:build
       - run: yarn ui:publish
