@@ -3,7 +3,6 @@
 # Define the file path
 YARN_RC="./.yarnrc.yml"
 NPM_RC="./.npmrc"
-TOKEN_VALUE="${{ secrets.GITHUB_TOKEN }}"
 
 # Check if the file exists, if so, delete it
 if [ -f "$NPM_RC" ]; then
@@ -25,5 +24,5 @@ if [ ! -f "$YARN_RC" ]; then
   echo "npmScopes:" >> "$YARN_RC"
   echo "  vpvnguyen:" >> "$YARN_RC"
   echo "    npmRegistryServer: \"https://npm.pkg.github.com\"" >> "$YARN_RC"
-  echo "    npmAlwaysAuth: true" >> "$YARN_RC"
+  echo "    npmAlwaysAuth: true" >> "$NODE_AUTH_TOKEN"
 fi
