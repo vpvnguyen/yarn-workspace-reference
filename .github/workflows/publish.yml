@@ -40,7 +40,10 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
           registry-url: 'https://npm.pkg.github.com/'
-
+      - name: Yarn setup
+        run: |
+              corepack enable yarn
+              corepack prepare
       - name: Publish package
         run: yarn workspace @yarn-workspace-reference/ui npm publish
         env:
