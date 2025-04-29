@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@vpvnguyen/yarn-workspace-reference-ui": ["../../packages/ui/src/index.tsx"]
+    }
+  },
+  "include": [
+    "./src",                      // your vite app source folder
+    "../../packages/ui/src"       // referenced package with JSX/TSX
+  ]
+}

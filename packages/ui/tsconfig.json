@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "dist",
-    "emitDeclarationOnly": false,
-    "outDir": "dist",
-    "moduleResolution": "bundler",
     "target": "ESNext",
     "module": "ESNext",
-    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "baseUrl": "."
   },
-  "include": ["src/**/*", "src/index.ts"],
-  "exclude": ["dist"]
+  "include": ["src"]
 }

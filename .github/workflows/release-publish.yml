@@ -20,7 +20,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: corepack enable yarn
       - run: corepack prepare
-      - run: echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > "./.npmrc"
+      - run: chmod +x ./generate-yarnrc.sh
+      - run: ./generate-yarnrc.sh
       - run: yarn install
       - run: yarn ui:build
       - run: yarn ui:publish
