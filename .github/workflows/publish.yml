@@ -12,17 +12,13 @@ env:
   node-version: 22
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node-version }}
-          registry-url: 'https://npm.pkg.github.com/'
 
       - name: Install dependencies
         run: |
@@ -32,6 +28,18 @@ jobs:
 
       - name: Build package
         run: yarn workspace @yarn-workspace-reference/ui run build
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.node-version }}
+          registry-url: 'https://npm.pkg.github.com/'
 
       - name: Publish package
         run: yarn workspace @yarn-workspace-reference/ui npm publish
