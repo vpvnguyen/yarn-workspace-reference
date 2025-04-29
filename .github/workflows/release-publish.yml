@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 22
           registry-url: "https://npm.pkg.github.com/"
-      - name: Set NODE_AUTH_TOKEN environment variable
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: corepack enable yarn
