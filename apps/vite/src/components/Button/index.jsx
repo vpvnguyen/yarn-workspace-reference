@@ -1,3 +1,3 @@
-import { Button } from '@yarn-workspace-reference/ui'
+import { Button } from '@vpvnguyen/yarn-workspace-reference-ui'
 
 export { Button }

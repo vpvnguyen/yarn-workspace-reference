@@ -32,7 +32,7 @@ yarn init
 ```json
 {
   "dependencies": {
-    "@yarn-workspace-reference/ui": "workspace:^"
+    "@vpvnguyen/yarn-workspace-reference-ui": "workspace:^"
   }
 }
 ```
@@ -56,7 +56,7 @@ yarn install
 `/packages/ui/package.json`:
 ```
 {
-  "name": "@yarn-workspace-reference/ui",
+  "name": "@vpvnguyen/yarn-workspace-reference-ui",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -138,10 +138,10 @@ jobs:
         run: yarn install
 
       - name: Build package
-        run: yarn workspace @yarn-workspace-reference/ui run build
+        run: yarn workspace @vpvnguyen/yarn-workspace-reference-ui run build
 
       - name: Publish package
-        run: yarn workspace @yarn-workspace-reference/ui npm publish --access restricted
+        run: yarn workspace @vpvnguyen/yarn-workspace-reference-ui npm publish --access restricted
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -1,5 +1,5 @@
 {
-  "name": "@yarn-workspace-reference/ui",
+  "name": "@vpvnguyen/yarn-workspace-reference-ui",
   "version": "1.0.2",
   "packageManager": "yarn@4.2.2",
   "source": "src/index.ts",

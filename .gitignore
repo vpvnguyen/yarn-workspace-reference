@@ -14,5 +14,5 @@
 .npmrc
 dist
 node_modules
-# .yarnrc.yml
+.yarnrc.yml
 *.tmp.*

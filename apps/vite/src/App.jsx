@@ -33,7 +33,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <div style={{ border: '1px solid', borderColor: theme.colors.primary, padding: '3rem' }}>
-        <pre>@yarn-workspace-reference/ui</pre>
+        <pre>@vpvnguyen/yarn-workspace-reference-ui</pre>
         <Button />
         <button style={{ color: theme.colors.primary }}>Themed Button</button>
       </div>

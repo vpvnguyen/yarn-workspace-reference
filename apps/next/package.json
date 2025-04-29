@@ -1,5 +1,5 @@
 {
-  "name": "@yarn-workspace-reference/next",
+  "name": "@vpvnguyen/yarn-workspace-reference-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/cache": "^11.14.0",
-    "@emotion/react": "^11.14.0",
-    "@emotion/server": "^11.11.0",
-    "@yarn-workspace-reference/ui": "workspace:^",
-    "next": "15.2.3",
+    "@vpvnguyen/yarn-workspace-reference-ui": "workspace:^",
+    "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
