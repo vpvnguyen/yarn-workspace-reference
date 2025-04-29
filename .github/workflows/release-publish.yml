@@ -18,6 +18,11 @@ jobs:
           registry-url: "https://npm.pkg.github.com/"
       - run: corepack enable yarn
       - run: corepack prepare
+      - run: ./generate-yarnrc.sh
+      - run: echo "NODE_AUTH_TOKEN"
+      - run: echo "$NODE_AUTH_TOKEN"
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~./.npmrc
+      - run: echo "    npmAuthToken: \"${{ secrets.GITHUB_TOKEN }}\"" >> ~/.yarnrc.yml
       - run: yarn install
       - run: yarn ui:build
       - run: yarn ui:publish
