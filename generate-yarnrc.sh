@@ -24,5 +24,6 @@ if [ ! -f "$YARN_RC" ]; then
   echo "npmScopes:" >> "$YARN_RC"
   echo "  vpvnguyen:" >> "$YARN_RC"
   echo "    npmRegistryServer: \"https://npm.pkg.github.com\"" >> "$YARN_RC"
-  echo "    npmAlwaysAuth: true" >> "$NODE_AUTH_TOKEN"
+  echo "    npmAlwaysAuth: true" >> "$YARN_RC"
+  echo "    npmAuthToken: \"$NODE_AUTH_TOKEN\"" >> "$YARN_RC"
 fi
