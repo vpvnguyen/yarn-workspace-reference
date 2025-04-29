@@ -1,6 +1,8 @@
 {
   "private": true,
   "name": "vpvnguyen",
+  "version": "0.1.0",
+  "description": "A monorepo for yarn workspace reference",
   "packageManager": "yarn@4.2.2",
   "workspaces": [
     "apps/*",
