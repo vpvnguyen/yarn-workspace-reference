@@ -1,37 +1,27 @@
+// release-all.js
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const workspaces = ['packages'];
-const cwd = process.cwd();
+const baseDir = path.resolve(__dirname, 'packages');
+const packageDirs = fs.readdirSync(baseDir, { withFileTypes: true });
 
-for (const workspace of workspaces) {
-  const fullPath = path.resolve(cwd, workspace);
-  if (!fs.existsSync(fullPath)) continue;
+for (const dirent of packageDirs) {
+  if (!dirent.isDirectory()) continue;
 
-  const packages = fs.readdirSync(fullPath);
+  const dirPath = path.join(baseDir, dirent.name);
+  console.log(`\n🚀 Releasing package: ${dirent.name}`);
 
-  for (const pkg of packages) {
-    const pkgPath = path.join(fullPath, pkg);
-    const pkgJsonPath = path.join(pkgPath, 'package.json');
-
-    if (!fs.existsSync(pkgJsonPath)) continue;
-
-    console.log(`CWD: ${cwd}`);
-    console.log(`\n🔍 Releasing ${workspace}/${pkg} ...`);
-
-    try {
-      execSync(`npx semantic-release --dry-run --cwd ${pkgPath} --extends ./release.config.js`, {
-        stdio: 'inherit',
-        env: {
-          ...process.env,
-          // Optional: pass GitHub token explicitly if needed
-          // GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-          // NODE_AUTH_TOKEN: process.env.NODE_AUTH_TOKEN
-        },
-      });
-    } catch (e) {
-      console.warn(`⚠️ Semantic release failed for ${pkg}: ${e.message}`);
-    }
+  try {
+    execSync(`npx semantic-release --dry-run`, {
+      cwd: dirPath,
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        SEMANTIC_RELEASE_PACKAGE: dirent.name,
+      },
+    });
+  } catch (err) {
+    console.warn(`⚠️ Skipping ${dirent.name}: ${err.message}`);
   }
 }
