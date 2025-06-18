@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build-package": "vite build",
-    "publish-package": "npm publish"
+    "publish-package": "yarn publish"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
