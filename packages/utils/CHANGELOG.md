@@ -31,6 +31,54 @@
 * use yarn 4 command ([c388710](https://github.com/vpvnguyen/yarn-workspace-reference/commit/c3887103245af19e9e96b0c3cb7f18857a4216f0))
 * use yarn publish instead ([84dec6e](https://github.com/vpvnguyen/yarn-workspace-reference/commit/84dec6e0813a1def852faf1a57ffacaf4dbebfdd))
 * utils vite build config ([d6a0d43](https://github.com/vpvnguyen/yarn-workspace-reference/commit/d6a0d4397359cf37846cace990762ed9b0910b15))
+* yarn set version ([ca2f19a](https://github.com/vpvnguyen/yarn-workspace-reference/commit/ca2f19aaa2cd12c148f23354a6db22c882055854))
+
+
+### Features
+
+* add theming to next app ([9e9da9b](https://github.com/vpvnguyen/yarn-workspace-reference/commit/9e9da9bbb158c313634b7f1b817984f79a0e8849))
+* configure semantic-release ([57b278f](https://github.com/vpvnguyen/yarn-workspace-reference/commit/57b278f4a6313a576a01358def96388392b1e65a))
+* create apps and packages workspaces ([34b3b92](https://github.com/vpvnguyen/yarn-workspace-reference/commit/34b3b92a3dae522e57176a3f9fa212cd1c12eebb))
+* create example for npm private registry ([41627dc](https://github.com/vpvnguyen/yarn-workspace-reference/commit/41627dc7ba06319e7ba348fffcafb8eda5054ad5))
+* create theme ([0b4de2a](https://github.com/vpvnguyen/yarn-workspace-reference/commit/0b4de2ad678a9a47a6991e3b50443a13fd4a9c99))
+* enable publish all packages ([b169d1e](https://github.com/vpvnguyen/yarn-workspace-reference/commit/b169d1e0848ebb5380bf7252f8edbfaafeb25669))
+* enable semantic-release ([e652790](https://github.com/vpvnguyen/yarn-workspace-reference/commit/e6527907d60a2858e517275cea33d4cc3158d08e))
+* register auth token ([8fcace8](https://github.com/vpvnguyen/yarn-workspace-reference/commit/8fcace85e6d9153316e726a01bf8de59d9fb83c0))
+* update build install step ([cb942bc](https://github.com/vpvnguyen/yarn-workspace-reference/commit/cb942bc12bf574a9e063a899b45aba5672316837))
+
+# 1.0.0 (2025-06-18)
+
+
+### Bug Fixes
+
+* auth token ([04cfe17](https://github.com/vpvnguyen/yarn-workspace-reference/commit/04cfe176319466636f8617e3bd8d6e9bbcd141d9))
+* build and publish jobs ([403ab00](https://github.com/vpvnguyen/yarn-workspace-reference/commit/403ab0020d94407b2530253cc6d8229fb61121b1))
+* build and publish jobs ([ca9a348](https://github.com/vpvnguyen/yarn-workspace-reference/commit/ca9a348427109c7e9b155942fd01d365908ee444))
+* bump higher than other packages scoped under [@vpvnguyen](https://github.com/vpvnguyen) ([77af49c](https://github.com/vpvnguyen/yarn-workspace-reference/commit/77af49cf1dd0eaaa24faf85a8452ee75a40b3e64))
+* change token name ([c093fd0](https://github.com/vpvnguyen/yarn-workspace-reference/commit/c093fd0736a314fffffc0d304aa2744825377368))
+* define registry ([a67808c](https://github.com/vpvnguyen/yarn-workspace-reference/commit/a67808cf9348def69a87f62b25f353d8b5e72073))
+* enable yarn ([c86f2c9](https://github.com/vpvnguyen/yarn-workspace-reference/commit/c86f2c954c6d6c1d198fcf071bb3a212b1082f6a))
+* expose npm auth token to actions ([4e7a643](https://github.com/vpvnguyen/yarn-workspace-reference/commit/4e7a643b46985b9aa70230a2e78a39e121a06d42))
+* install step ([6e38940](https://github.com/vpvnguyen/yarn-workspace-reference/commit/6e38940ec377a26943ae31a8b1a07d12c0dcf5b6))
+* modular release ([358e1e6](https://github.com/vpvnguyen/yarn-workspace-reference/commit/358e1e63d179d39810d3d4ebd197e3d445fb229c))
+* modular release ([add8dc3](https://github.com/vpvnguyen/yarn-workspace-reference/commit/add8dc3ae1b103153676b8cf7210be46f9e43652))
+* multi package versioning ([66e0772](https://github.com/vpvnguyen/yarn-workspace-reference/commit/66e0772183f4c383644cee343f84b850b9569210))
+* namespacing ([b20be92](https://github.com/vpvnguyen/yarn-workspace-reference/commit/b20be9201a7a70c665554d11554a24058345637f))
+* npm auth ([7dda35d](https://github.com/vpvnguyen/yarn-workspace-reference/commit/7dda35d3f3378f02d75527d0e3bfd1c952ea8dd6))
+* permissions ([27e61c2](https://github.com/vpvnguyen/yarn-workspace-reference/commit/27e61c2b568bf75c4c58f3f3034d2ed3c020d039))
+* permissions ([9898c1b](https://github.com/vpvnguyen/yarn-workspace-reference/commit/9898c1b6e3a235556e5fcad5acfcd8b279e54a8a))
+* registry url ([97e1f5e](https://github.com/vpvnguyen/yarn-workspace-reference/commit/97e1f5e07eacac8842ef5271bccd7455355f36ac))
+* remove restricted ([5c9af69](https://github.com/vpvnguyen/yarn-workspace-reference/commit/5c9af696a462ee669713991ce815fdc48209ae5b))
+* script permissions ([1374574](https://github.com/vpvnguyen/yarn-workspace-reference/commit/13745742dd8dd48d2372ed89e9e2a6d732e57466))
+* separate commands ([232bdc4](https://github.com/vpvnguyen/yarn-workspace-reference/commit/232bdc46f2560d3c51f46846161e7e559aa7e85c))
+* syntax ([db8b14a](https://github.com/vpvnguyen/yarn-workspace-reference/commit/db8b14a01dfd91a7a110945893b1a451e46987f6))
+* ts config ([0e7041f](https://github.com/vpvnguyen/yarn-workspace-reference/commit/0e7041f75c27198a17917cb40c32b740a2ee5cb9))
+* ts support ([8dd805c](https://github.com/vpvnguyen/yarn-workspace-reference/commit/8dd805c3275fd519ff3e4cc6e45fd8a9140d694d))
+* ui package publish ([a5584d1](https://github.com/vpvnguyen/yarn-workspace-reference/commit/a5584d10669cda033bdbe21f04af78e95534c628))
+* use exec instead of npm ([4773496](https://github.com/vpvnguyen/yarn-workspace-reference/commit/477349685d61a0388e88556be21cfe62a648de93))
+* use yarn 4 command ([c388710](https://github.com/vpvnguyen/yarn-workspace-reference/commit/c3887103245af19e9e96b0c3cb7f18857a4216f0))
+* use yarn publish instead ([84dec6e](https://github.com/vpvnguyen/yarn-workspace-reference/commit/84dec6e0813a1def852faf1a57ffacaf4dbebfdd))
+* utils vite build config ([d6a0d43](https://github.com/vpvnguyen/yarn-workspace-reference/commit/d6a0d4397359cf37846cace990762ed9b0910b15))
 
 
 ### Features
