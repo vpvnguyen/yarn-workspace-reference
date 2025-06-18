@@ -23,5 +23,5 @@ jobs:
       - run: chmod +x ./generate-yarnrc.sh
       - run: ./generate-yarnrc.sh
       - run: yarn install
-      - run: yarn ui:build
-      - run: yarn ui:publish
+      - run: yarn build:packages
+      - run: yarn publish:packages

@@ -11,6 +11,7 @@
   "scripts": {
     "build:all": "yarn workspaces foreach --all run build",
     "build:packages": "yarn workspaces foreach --all run build-package",
+    "publish:packages": "yarn workspaces foreach --all run publish-package",
     "release:packages": "node ./release-packages.js",
     "release:packages:dry": "node ./release-packages-dry.js",
     "vite:": "yarn workspace @vpvnguyen/yarn-workspace-reference-vite",
