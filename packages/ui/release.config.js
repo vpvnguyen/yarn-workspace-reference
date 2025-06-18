@@ -13,5 +13,13 @@ module.exports = {
     ],
     "@semantic-release/github",
     "@semantic-release/git",
+    [
+      "@semantic-release/exec",
+      {
+        prepareCmd:
+          "yarn version --new-version ${nextRelease.version} --no-git-tag-version",
+        publishCmd: "yarn npm publish",
+      },
+    ],
   ],
 };
