@@ -4,12 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from "./components/Button";
 import { useTheme } from '@emotion/react'
-import hello from '@vpvnguyen/github-package-reference'
 
 function App() {
   const [count, setCount] = useState(0)
   const theme = useTheme()
-  hello()
   return (
     <>
       <div>

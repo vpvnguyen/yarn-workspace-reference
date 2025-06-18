@@ -1365,13 +1365,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vpvnguyen/github-package-reference@npm:1.0.7":
-  version: 1.0.7
-  resolution: "@vpvnguyen/github-package-reference@npm:1.0.7::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40vpvnguyen%2Fgithub-package-reference%2F1.0.7%2F269f4d95b826ccac0eb23e588ea7eba5ac78ddb4"
-  checksum: 10c0/6f60a704df6d21a368f547c7024ca74020430e8d4c141a2aafbcf1ed93793a6df81c791bf37b30eb255042372258d4509b501b9fdf6353bf90a5da889706dbe9
-  languageName: node
-  linkType: hard
-
 "@vpvnguyen/yarn-workspace-reference-next@workspace:apps/next":
   version: 0.0.0-use.local
   resolution: "@vpvnguyen/yarn-workspace-reference-next@workspace:apps/next"
@@ -1413,7 +1406,6 @@ __metadata:
     "@types/react": "npm:^19.0.10"
     "@types/react-dom": "npm:^19.0.4"
     "@vitejs/plugin-react-swc": "npm:^3.8.0"
-    "@vpvnguyen/github-package-reference": "npm:1.0.7"
     "@vpvnguyen/yarn-workspace-reference-ui": "workspace:^"
     eslint: "npm:^9.21.0"
     eslint-plugin-react-hooks: "npm:^5.1.0"
