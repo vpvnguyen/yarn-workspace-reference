@@ -1,6 +1,6 @@
 {
   "name": "@vpvnguyen/yarn-workspace-reference-utils",
-  "version": "1.0.11",
+  "version": "1.0.0",
   "packageManager": "yarn@4.2.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
