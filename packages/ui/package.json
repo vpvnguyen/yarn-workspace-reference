@@ -13,8 +13,9 @@
     }
   },
   "scripts": {
-    "build": "vite build",
-    "publish": "npm publish"
+    "build-package": "vite build",
+    "publish-package": "npm publish",
+    "release-package:dry": "npx semantic-release --dry-run"
   },
   "publishConfig": {
     "@vpvnguyen/yarn-workspace-reference-ui:registry": "https://npm.pkg.github.com"

@@ -10,6 +10,9 @@
   ],
   "scripts": {
     "build:all": "yarn workspaces foreach --all run build",
+    "build:packages": "yarn workspaces foreach --all run build-package",
+    "release:packages": "node ./release-packages.js",
+    "release:packages:dry": "node ./release-packages-dry.js",
     "vite:": "yarn workspace @vpvnguyen/yarn-workspace-reference-vite",
     "vite:add": "yarn vite: add",
     "vite:dev": "yarn vite: run dev",
@@ -20,10 +23,19 @@
     "next:build": "yarn next: run build",
     "ui:": "yarn workspace @vpvnguyen/yarn-workspace-reference-ui",
     "ui:add": "yarn ui: add",
-    "ui:build": "yarn ui: run build",
-    "ui:publish": "yarn ui: run publish"
+    "ui:build": "yarn ui: run build-package",
+    "ui:publish": "yarn ui: run publish-package",
+    "ui:release:dry": "yarn ui: run release-package:dry",
+    "utils:": "yarn workspace @vpvnguyen/yarn-workspace-reference-utils",
+    "utils:add": "yarn utils: add",
+    "utils:build": "yarn utils: run build-package",
+    "utils:publish": "yarn utils: run publish-package",
+    "utils:release:dry": "yarn utils: run release-package:dry"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.5"
   }
 }

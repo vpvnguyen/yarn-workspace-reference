@@ -1,4 +1,33 @@
 {
   "name": "@vpvnguyen/yarn-workspace-reference-utils",
-  "packageManager": "yarn@4.2.2"
+  "version": "1.0.11",
+  "packageManager": "yarn@4.2.2",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build-package": "vite build",
+    "publish-package": "npm publish",
+    "release-package:dry": "npx semantic-release --dry-run"
+  },
+  "publishConfig": {
+    "@vpvnguyen/yarn-workspace-reference-utils:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vpvnguyen/yarn-workspace-reference",
+    "directory": "packages/utils"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-plugin-dts": "^4.5.3"
+  }
 }
