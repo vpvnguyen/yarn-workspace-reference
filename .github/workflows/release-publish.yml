@@ -24,4 +24,4 @@ jobs:
       - run: ./generate-yarnrc.sh
       - run: yarn install
       - run: yarn build:packages
-      - run: yarn publish:packages
+      - run: yarn release:packages
