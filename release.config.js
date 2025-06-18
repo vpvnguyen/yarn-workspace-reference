@@ -2,7 +2,6 @@ const path = require("path");
 
 module.exports = {
   branches: ["main"],
-  tagFormat: "@vpvnguyen/yarn-workspace-reference-ui@${version}",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",

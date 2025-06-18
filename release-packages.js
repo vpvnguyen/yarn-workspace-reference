@@ -1,31 +1,40 @@
-const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
-const baseDir = path.resolve(__dirname, "packages");
-const dirs = fs.readdirSync(baseDir).filter((name) => {
-  const pkgPath = path.join(baseDir, name, "package.json");
-  return fs.existsSync(pkgPath);
-});
+const workspaces = ["packages"];
+const cwd = process.cwd();
 
-dirs.forEach((dir) => {
-  const packageDir = path.join(baseDir, dir);
-  console.log(`\n Releasing package: ${dir}`);
+for (const workspace of workspaces) {
+  const fullPath = path.resolve(cwd, workspace);
+  if (!fs.existsSync(fullPath)) continue;
 
-  try {
-    execSync(`npx semantic-release --extends ./release.config.js`, {
-      cwd: packageDir,
-      stdio: "inherit",
-      env: {
-        ...process.env,
-        // Optional: pass GitHub token explicitly if needed
-        // GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-        // NODE_AUTH_TOKEN: process.env.NODE_AUTH_TOKEN
-      },
-    });
-  } catch (error) {
-    console.warn(
-      `[warn] Skipping ${dir} due to error or no release: ${error?.message}`,
-    );
+  const packages = fs.readdirSync(fullPath);
+
+  for (const pkg of packages) {
+    const pkgPath = path.join(fullPath, pkg);
+    const pkgJsonPath = path.join(pkgPath, "package.json");
+
+    if (!fs.existsSync(pkgJsonPath)) continue;
+
+    console.log(`CWD: ${cwd}`);
+    console.log(`\n🔍 Releasing ${workspace}/${pkg} ...`);
+
+    try {
+      execSync(
+        `npx semantic-release --cwd ${pkgPath} --extends ./release.config.js`,
+        {
+          stdio: "inherit",
+          env: {
+            ...process.env,
+            // Optional: pass GitHub token explicitly if needed
+            // GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+            // NODE_AUTH_TOKEN: process.env.NODE_AUTH_TOKEN
+          },
+        },
+      );
+    } catch (e) {
+      console.warn(`⚠️ Semantic release failed for ${pkg}: ${e.message}`);
+    }
   }
-});
+}

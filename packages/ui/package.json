@@ -11,11 +11,6 @@
       "require": "./dist/index.cjs.js"
     }
   },
-  "scripts": {
-    "build-package": "vite build",
-    "publish-package": "npm publish",
-    "release-package:dry": "npx semantic-release --dry-run"
-  },
   "publishConfig": {
     "@vpvnguyen/yarn-workspace-reference-ui:registry": "https://npm.pkg.github.com"
   },
@@ -23,6 +18,10 @@
     "type": "git",
     "url": "https://github.com/vpvnguyen/yarn-workspace-reference",
     "directory": "packages/ui"
+  },
+  "scripts": {
+    "build-package": "vite build",
+    "publish-package": "npm publish"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
